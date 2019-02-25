@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import java.net.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0"
+	prefWidth="657.0" xmlns="http://javafx.com/javafx/8"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="controllers.MeasureListController">
+	<children>
+		<VBox spacing="20">
+			<HBox spacing="40">
+				<children>
+					<Label fx:id="userLabel" prefHeight="27.0" prefWidth="190.0"
+						text="Welcome back username!" />
+				</children>
+				<children>
+					<Label fx:id="doctorLabel" prefHeight="27.0"
+						prefWidth="200.0" text="Your doctor is doctor" />
+				</children>
+			</HBox>
+
+			<HBox prefHeight="55.0" prefWidth="636.0" >
+				<GridPane alignment="CENTER" prefHeight="120.0"
+					prefWidth="684.0" vgap="10.0" hgap="10">
+					<children>
+						<Button fx:id="measuresButton" mnemonicParsing="false"
+							text="My Measures" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+						<Button fx:id="treatmentButton" mnemonicParsing="false"
+							text="My Treatment" GridPane.columnIndex="2"
+							GridPane.rowIndex="1" />
+						<Button fx:id="postsButton" mnemonicParsing="false"
+							text="View posts" GridPane.columnIndex="3"
+							GridPane.rowIndex="1" />
+						<Button fx:id="logoutButton" mnemonicParsing="false"
+							text="Log out" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+					</children>
+				</GridPane>
+			</HBox>
+			<HBox prefHeight="55.0" prefWidth="636.0" >
+				<GridPane alignment="CENTER" prefHeight="120.0"
+					prefWidth="684.0" vgap="10.0" hgap="10">
+					<children>
+						<!-- FORM TO UPLOAD A MEASURE -->
+						<TextField fx:id="value" promptText="Value of measure"
+							GridPane.columnIndex="0" GridPane.rowIndex="1" />
+						<TextField fx:id="month" promptText="Month"
+							GridPane.columnIndex="1" GridPane.rowIndex="1" />
+						<TextField fx:id="day" promptText="Day"
+							GridPane.columnIndex="2" GridPane.rowIndex="1" />
+						<TextField fx:id="year" promptText="Year"
+							GridPane.columnIndex="3" GridPane.rowIndex="1" />
+						<TextField fx:id="comments" promptText="Comments"
+							GridPane.columnIndex="4" GridPane.rowIndex="1" />
+						<Button fx:id="uploadMeasureButton" mnemonicParsing="false"
+							text="Upload" GridPane.columnIndex="2"
+							GridPane.rowIndex="0" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+
+						<Button fx:id="viewMeasuresButton" mnemonicParsing="false"
+							text="See measures" GridPane.columnIndex="2"
+							GridPane.rowIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+					</children>
+					<padding>
+						<Insets bottom="15.0" left="10.0" right="20.0" top="20.0" />
+					</padding>
+				</GridPane>
+			</HBox>
+			<!-- Table of measures -->
+			<TableView fx:id="tableView" prefHeight="200.0"
+				prefWidth="370.0" onMouseClicked="#setDelete">
+				<columns>
+					<TableColumn fx:id="columnOne" text="Value"
+						prefWidth="50.0" />
+					<TableColumn fx:id="columnTwo" text="Year"
+						prefWidth="50.0" />
+					<TableColumn fx:id="columnThree" text="Month"
+						prefWidth="50.0" />
+					<TableColumn fx:id="columnFour" text="Day"
+						prefWidth="50.0" />
+					<TableColumn fx:id="columnFive" text="Comments"
+						prefWidth="120.0" />
+					<TableColumn fx:id="columnSix" text="Patient"
+						prefWidth="50.0" />
+				</columns>
+			</TableView>
+			<Button fx:id="deleteButton" mnemonicParsing="false"
+							text="Delete"/>
+		</VBox>
+	</children>
+	<stylesheets>
+		<URL value="@/application/application.css" />
+	</stylesheets>
+
+</StackPane>

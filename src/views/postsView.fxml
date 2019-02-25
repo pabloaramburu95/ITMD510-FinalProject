@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import java.net.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0"
+	prefWidth="657.0" xmlns="http://javafx.com/javafx/8"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="controllers.PostsViewController">
+	<children>
+		<VBox spacing="10">
+			<HBox spacing="40">
+				<Label fx:id="userPostsLabel" prefHeight="27.0" prefWidth="350.0"
+					text="Welcome admin!" />
+				<Button fx:id="logoutButton" mnemonicParsing="false"
+					text="Log out" />
+			</HBox>
+			<ListView fx:id="postsListView" prefHeight="200.0"
+				prefWidth="370.0">
+			</ListView>
+			<HBox>
+				<TextField fx:id="newPost"
+					promptText="Write a new post" />
+				<Button fx:id="uploadButton" mnemonicParsing="false"
+					text="Upload" />
+			</HBox>
+		</VBox>
+	</children>
+	<stylesheets>
+		<URL value="@/application/application.css" />
+	</stylesheets>
+</StackPane>

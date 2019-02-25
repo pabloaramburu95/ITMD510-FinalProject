@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import java.net.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0"
+	prefWidth="657.0" xmlns="http://javafx.com/javafx/8"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="controllers.adminViewController">
+	<children>
+		<VBox spacing="10">
+			<HBox>
+				<Label fx:id="adminLabel" prefHeight="27.0" prefWidth="270.0"
+					text="Welcome admin!" />
+				<Button fx:id="logoutButton" mnemonicParsing="false"
+					text="Log out" />
+			</HBox>
+			<Label fx:id="tableLabelP" prefHeight="27.0" prefWidth="270.0"
+					text="Patients" />
+			<TableView fx:id="tablePatients" prefHeight="200.0"
+				prefWidth="370.0" onMouseClicked="#displaySelectedPatient">
+				<columns>
+					<TableColumn fx:id="usernamePatient" text="Username"
+						prefWidth="50.0" />
+					<TableColumn fx:id="passwordPatient" text="Password"
+						prefWidth="50.0" />
+					<TableColumn fx:id="treatmentPatient" text="Treatment"
+						prefWidth="50.0" />
+					<TableColumn fx:id="doctorPatient" text="Doctor"
+						prefWidth="50.0" />
+				</columns>
+			</TableView>
+			<Label fx:id="tableLabelD" prefHeight="27.0" prefWidth="270.0"
+					text="Doctors" />
+			<TableView fx:id="tableDoctors" prefHeight="200.0"
+				prefWidth="370.0" onMouseClicked="#displaySelectedDoctor">
+				<columns>
+					<TableColumn fx:id="usernameDoc" text="Username"
+						prefWidth="50.0" />
+					<TableColumn fx:id="passwordDoc" text="Password"
+						prefWidth="50.0" />
+					
+				</columns>
+			</TableView>
+			<TextField fx:id="selectedUserText"
+				promptText="Write user to be deleted" />
+			<Button fx:id="selectedUserButton" mnemonicParsing="false"
+				text="Delete" />
+		</VBox>
+	</children>
+	<stylesheets>
+		<URL value="@/application/application.css" />
+	</stylesheets>
+</StackPane>

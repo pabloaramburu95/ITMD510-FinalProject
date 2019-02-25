@@ -1,0 +1,126 @@
+.root {
+     -fx-background-image: url("images/fondo.jpg");
+}
+
+#tableLabelP, #tableLabelD .text{
+	-fx-font-size:20.0;
+	-fx-font-family: "Impact";
+	-fx-fill: black;
+	 -fx-stroke: white;
+	 -fx-stroke-width: 0.5;
+}
+
+#adminLabel .text{
+	-fx-font-size:35.0;
+	-fx-font-family: "Impact";
+	-fx-fill: black;
+	 -fx-stroke: white;
+	 -fx-stroke-width: 0.5;
+}
+
+#userPostsLabel .text{
+	-fx-font-size:35.0;
+	-fx-font-family: "Impact";
+	-fx-fill: black;
+	 -fx-stroke: white;
+	 -fx-stroke-width: 0.5;
+}
+
+#userLabel .text{
+	-fx-font-size:20.0;
+	-fx-font-family: "Impact";
+	-fx-fill: black;
+	 -fx-stroke: white;
+	 -fx-stroke-width: 0.5;
+}
+
+#dLabel .text{
+	-fx-font-size:35.0;
+	-fx-font-family: "Impact";
+	-fx-fill: black;
+	 -fx-stroke: white;
+	 -fx-stroke-width: 0.5;
+}
+
+#patientLabel .text{
+	-fx-font-size:20.0;
+	-fx-font-family:"Trebuchet MS";
+}
+
+
+#doctorLabel .text{
+	-fx-font-size:20.0;
+	-fx-font-family: "Impact";
+	-fx-fill: black;
+	 -fx-stroke: white;
+	 -fx-stroke-width: 0.5;
+}
+#welcome .text{
+	 -fx-font-family: "Impact";
+	 -fx-font-size: 78.0;
+	 -fx-stroke: black;
+	 -fx-stroke-width: 2.0;
+	 -fx-fill: white;
+	
+}
+
+#oldTreatmentText .text{
+	 -fx-font-size: 15.0;
+	 -fx-font-family:"Trebuchet MS";
+	 -fx-fill: black;
+}
+
+
+#loginButton,#registerButton, #treatmentButton, #measuresButton, #logoutButton, 
+	#uploadMeasureButton, #patientsButton, #patientDetailButton, #updateButton,
+	#selectedUserButton, #deleteButton, #postsButton, #uploadButton {
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: lightblue;
+    -fx-font-size: 18.0;
+    -fx-background-radius: 22.0;
+    -fx-text-alignment:center;
+}
+
+#viewMeasuresButton {
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: lightblue;
+    -fx-font-size: 15.0;
+    -fx-background-radius: 22.0;
+    -fx-text-alignment:center;
+}
+
+#loginButton:hover,#registerButton:hover, #treatmentButton:hover, #measuresButton:hover, #logoutButton:hover,
+	#uploadMeasureButton:hover, #viewMeasuresButton:hover, #patientsButton:hover, #patientDetailButton:hover,
+	#updateButton:hover, #selectedUserButton:hover, #deleteButton:hover, #postsButton:hover, #uploadButton:hover{
+	-fx-cursor: hand ;
+    -fx-font-weight: bold;
+    -fx-background-color: white;
+    -fx-background-radius: 22.0;
+    -fx-text-fill: #2196f3;
+    -fx-border-radius: 20.0;
+    -fx-border-width:3.0;
+
+    }
+#loginButton:pressed,#registerButton:pressed, #treatmentButton:pressed, #measuresButton:pressed,#logoutButton:pressed,
+	#uploadMeasureButton:pressed, #viewMeasuresButton:pressed, #patientsButton:pressed, #patientDetailButton:pressed,
+	#updateButton:pressed, #selectedUserButton:pressed , #deleteButton:pressed, #postsButton:pressed, #uploadButton:pressed{
+    -fx-font-weight: bold;
+    -fx-background-color: white;
+    -fx-background-radius: 22.0;
+    -fx-text-fill: #2196f3;
+    -fx-border-radius: 20.0;
+    -fx-border-width:3.0;
+    }
+#tableView .table-column {
+  -fx-alignment: CENTER;
+}
+	
+	
+HBox, VBox{
+	-fx-alignment: center;
+	-fx-padding:10.0;
+}

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import java.net.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0"
+	prefWidth="657.0" xmlns="http://javafx.com/javafx/8"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="controllers.PatientDetailsController">
+	<children>
+		<VBox>
+			<HBox spacing="30">
+				<Label fx:id="dLabel" mnemonicParsing="false"  prefHeight="27.0" prefWidth="400.0" />
+				<Button fx:id="logoutButton" mnemonicParsing="false"
+					text="Log out" />
+			</HBox>
+			<Label fx:id="patientLabel" mnemonicParsing="false" />
+			<HBox prefHeight="55.0" prefWidth="6306.0" spacing="15.0">
+				<GridPane alignment="CENTER" prefHeight="120.0"
+					prefWidth="684.0" vgap="10.0" hgap="15">
+					<children>
+						<Label fx:id="oldTreatmentText" GridPane.columnIndex="0"
+							GridPane.rowIndex="0" />
+						<Button fx:id="updateButton" mnemonicParsing="false"
+							text="Update Treatment" GridPane.columnIndex="2"
+							GridPane.rowIndex="0" />
+						<TextField fx:id="newTreatmentText"
+							promptText="Introduce new treatment" GridPane.columnIndex="1"
+							GridPane.rowIndex="0" />
+					</children>
+					<padding>
+						<Insets bottom="15.0" left="10.0" right="20.0" top="20.0" />
+					</padding>
+				</GridPane>
+			</HBox>
+			<!-- Table of measures -->
+			<TableView fx:id="tableView" prefHeight="200.0"
+				prefWidth="370.0">
+				<columns>
+					<TableColumn fx:id="columnOne" text="Value"
+						prefWidth="50.0" />
+					<TableColumn fx:id="columnTwo" text="Year"
+						prefWidth="50.0" />
+					<TableColumn fx:id="columnThree" text="Month"
+						prefWidth="50.0" />
+					<TableColumn fx:id="columnFour" text="Day"
+						prefWidth="50.0" />
+					<TableColumn fx:id="columnFive" text="Comments"
+						prefWidth="120.0" />
+				</columns>
+			</TableView>
+		</VBox>
+	</children>
+
+	<stylesheets>
+		<URL value="@/application/application.css" />
+	</stylesheets>
+</StackPane>
